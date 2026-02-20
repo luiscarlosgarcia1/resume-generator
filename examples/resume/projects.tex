@@ -1,0 +1,43 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Rocket Telemetry Pipeline} % Project title
+    {Rocket Launching Club} % Organization
+    {} % Location
+    {Feb. 2026 - Present} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Ingested raw transmitter strings and built a robust parser to extract key telemetry fields for launch tracking and post-flight review.}
+        \item {Implemented validation across stages, then structured the data for consistent downstream use across backend processing and frontend display.}
+        \item {Exposed processed telemetry through a FastAPI backend endpoint consumed by a frontend dashboard for real-time visibility into rocket metrics.}
+        \item {Organized telemetry fields into a consistent schema to support easier analysis, cleaner API responses, and maintainable integration.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Pathfinding Visualizer (Web)} % Project title
+    {Personal Project} % Organization
+    {} % Location
+    {Sept. 2025 - Present} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured core logic so each algorithm could be visualized and compared consistently.}
+        \item {Built a React web UI to display grid-based exploration and shortest-path results interactively, including controls for running scenarios.}
+        \item {Focused on clean algorithm separation, predictable state updates, and clear visual feedback to make behavior differences easier to understand.}
+        \item {Refined step-by-step animation timing and rendering updates to make algorithm progression easier to follow and evaluate.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}

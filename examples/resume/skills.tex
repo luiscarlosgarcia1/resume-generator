@@ -1,0 +1,53 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\makeatletter
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \tabularx{\textwidth}{@{}L{3.2cm}@{\hspace{1.2ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
+}{%
+\endtabularx\par
+}
+\renewcommand*{\cvskill}[2]{%
+  \skilltypestyle{#1} & \leavevmode\skillsetstyle{#2} \\
+}
+\makeatother
+
+\begin{cvskills}
+
+%---------------------------------------------------------
+  \cvskill
+    {Languages} % Category
+    {C++, C, Python} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Frameworks / Tools} % Category
+    {React, Django, FastAPI, Basic Data Pipelines, Git} % Skills
+
+%---------------------------------------------------------
+\end{cvskills}
+
+\makeatletter
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \tabularx{\textwidth}{r>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}
+}{%
+\endtabularx\par
+}
+\renewcommand*{\cvskill}[2]{%
+  \skilltypestyle{#1} & \leavevmode\skillsetstyle{#2} \\
+}
+\makeatother

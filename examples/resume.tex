@@ -32,18 +32,44 @@
 
 % Colors for text
 % Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
-\definecolor{sectiondivider}{HTML}{5D5D5D}
+\definecolor{darktext}{HTML}{3A3A3A}
+\definecolor{text}{HTML}{2F2F2F}
+\definecolor{graytext}{HTML}{4F4F4F}
+\definecolor{lighttext}{HTML}{8A8A8A}
+\definecolor{sectiondivider}{HTML}{4F4F4F}
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{text} #1}}
+\renewcommand{\acvSectionTopSkip}{0mm}
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\fontseries{sb}\selectfont\color{text} #1}}
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\fontseries{sb}\selectfont\color{text} #1}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{8.1pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\renewcommand*{\headeraddressstyle}[1]{{\fontsize{8.5pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\fontsize{7.3pt}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\headerquotestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\renewcommand*{\footerstyle}[1]{{\fontsize{8.5pt}{1em}\footerfont\scshape\color{lighttext} #1}}
+\renewcommand*{\sectionstyleface}[1]{{\fontsize{16.5pt}{1em}\bodyfont\bfseries #1}}
+\renewcommand*{\subsectionstyle}[1]{{\fontsize{12.5pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\renewcommand*{\paragraphstyle}{\fontsize{9.5pt}{1em}\bodyfontlight\upshape\color{text}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{8.5pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\subentrytitlestyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
+\renewcommand*{\subentrypositionstyle}[1]{{\fontsize{7.5pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\subentrydatestyle}[1]{{\fontsize{7.5pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\subentrylocationstyle}[1]{{\fontsize{7.5pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\subdescriptionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\honortitlestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\color{graytext} #1}}
+\renewcommand*{\honorpositionstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\honordatestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\color{graytext} #1}}
+\renewcommand*{\honorlocationstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\color{text} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -52,7 +78,7 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
-\name{\textbf{Luis}}{Carlos Garcia}
+\name{Luis}{Carlos Garcia}
 % \position{Undergraduate Student{\enskip\cdotp\enskip}Computer Science}
 \address{McAllen, Texas, United States of America}
 
@@ -103,8 +129,10 @@
 
 \input{resume/summary.tex}
 \input{resume/education.tex}
+\input{resume/projects.tex}
 \input{resume/experience.tex}
 \input{resume/extracurricular.tex}
+\input{resume/skills.tex}
 % \input{resume/honors.tex}
 
 % \input{resume/certificates.tex}
