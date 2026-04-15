@@ -25,17 +25,32 @@
     }
 
 %---------------------------------------------------------
+%  \cventry
+%    {Team Project | React Web App Prototype (Local)} % Subheader
+%    {UTRGV Inventor-Builder Matching App (Pre-Production, Early Stage)} % Project title
+%    {} % Location
+%    {Feb. 2026 - Present} % Date(s)
+%    {
+%      \begin{cvitems}
+%        \item {Setting up React/Vite project architecture and baseline UI for a UTRGV inventor-builder matching platform.}
+%        \item {Defining user stories and sprint backlog for swipe matching, mutual-like logic, and direct messaging workflows.}
+%        \item {Designing profile data fields and filter criteria (role, programming languages, degree level, school year) for recommendations.}
+%        \item {Collaborating in Agile team workflows using GitHub branches, pull requests, merges, and merge-conflict resolution.}
+%      \end{cvitems}
+%    }
+
+%---------------------------------------------------------
   \cventry
-    {Team Project | React Web App Prototype (Local)} % Subheader
-    {UTRGV Inventor-Builder Matching App (Pre-Production, Early Stage)} % Project title
+    {Independent Project | Python, Lua | Observer Pipeline (In Progress)} % Subheader
+    {Balatro AI (Observer + Live-State Exporter)} % Project title
     {} % Location
-    {Feb. 2026 - Present} % Date(s)
+    {Mar. 2026 - Present} % Date(s)
     {
       \begin{cvitems}
-        \item {Setting up React/Vite project architecture and baseline UI for a UTRGV inventor-builder matching platform.}
-        \item {Defining user stories and sprint backlog for swipe matching, mutual-like logic, and direct messaging workflows.}
-        \item {Designing profile data fields and filter criteria (role, programming languages, degree level, school year) for recommendations.}
-        \item {Collaborating in Agile team workflows using GitHub branches, pull requests, merges, and merge-conflict resolution.}
+        \item {Built a Python observer that reads Balatro save data and normalizes core run state including money, score, hands, discards, blind, vouchers, and shop metadata.}
+        \item {Added a Steamodded-compatible Lua live-state exporter that writes compact JSON snapshots so the observer can use fresher state than save files alone.}
+        \item {Created an \texttt{obs\_test.py} harness to poll state changes, capture screenshots of the Balatro window, and save timestamped observation outputs for debugging.}
+        \item {Wrote contract tests around live observation parsing and formatting to stabilize the data schema while the gameplay agent is still in progress.}
       \end{cvitems}
     }
 
