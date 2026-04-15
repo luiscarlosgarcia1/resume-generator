@@ -11,6 +11,20 @@
 
 %---------------------------------------------------------
   \cventry
+    {Independent Project | Python, Lua | Typed Observer + Runtime (In Progress)} % Subheader
+    {Balatro AI (Live-State Exporter + Runtime)} % Project title
+    {} % Location
+    {Mar. 2026 - Present} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Built a Steamodded-compatible Lua exporter and Python observer pipeline that converts live Balatro state into typed GameObservation snapshots instead of relying on stale save-file reads.}
+        \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop for exercising actions before UI automation.}
+        \item {Added smoke and contract tests across live parsing, pretty-print debugging, runtime flow, and exporter write behavior to stabilize the data schema while the agent remains in progress.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
     {Independent Project | C++, React | Localhost Prototype} % Subheader
     {Pathfinding Visualizer (Local Web App)} % Project title
     {} % Location
@@ -35,21 +49,6 @@
         \item {Built a React/Vite frontend for a UTRGV collaborator-matching app with login, signup, and role-based routing for student and business onboarding.}
         \item {Developed an Express + SQLite backend with JSON APIs for registration, login, and profile creation, including hashed passwords, validation, and duplicate-email handling.}
         \item {Implemented student and business profile flows plus a swipe-style home feed prototype to capture academic background, project needs, and future match preferences.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Independent Project | Python, Lua | Typed Observer + Runtime (In Progress)} % Subheader
-    {Balatro AI (Live-State Exporter + Runtime)} % Project title
-    {} % Location
-    {Mar. 2026 - Present} % Date(s)
-    {
-      \begin{cvitems}
-        \item {Built a Steamodded-compatible Lua exporter and Python observer pipeline that converts live Balatro state into typed \texttt{GameObservation} snapshots instead of relying on stale save-file reads.}
-        \item {Exercised a full typed observe/choose/validate/execute gameplay loop with high-level action commands, using explicit observer, policy, validator, and executor seams to verify end-to-end decision flow before live automation.}
-        \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop for exercising actions before UI automation.}
-        \item {Added smoke and contract tests across live parsing, pretty-print debugging, runtime flow, and exporter write behavior to stabilize the data schema while the agent remains in progress.}
       \end{cvitems}
     }
 
