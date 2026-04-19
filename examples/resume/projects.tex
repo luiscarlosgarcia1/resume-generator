@@ -19,7 +19,7 @@
       \begin{cvitems}
         \item {Built a Steamodded-compatible Lua exporter and Python observer pipeline that converts live Balatro state into typed GameObservation snapshots instead of relying on stale save-file reads.}
         \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop for exercising actions before UI automation.}
-        \item {Added smoke and contract tests across live parsing, pretty-print debugging, runtime flow, and exporter write behavior to stabilize the data schema while the agent remains in progress.}
+        %\item {Added smoke and contract tests across live parsing, pretty-print debugging, runtime flow, and exporter write behavior to stabilize the data schema while the agent remains in progress.}
       \end{cvitems}
     }
 
@@ -62,8 +62,7 @@
       \begin{cvitems}
         \item {Built a Flask app that ingests public hearing transcripts via the YouTube Transcript API and runs them through an LLM summarization pipeline to produce plain-language summaries.}
         \item {Implemented a Groq inference API-backed clustering service to group public comments into thematic concern areas and surface community viewpoints.}
-        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning, and Gunicorn as the WSGI server.}
-        \item {Structured the backend into service layers (summarization, clustering, accountability, comment ingestion) and covered core flows with pytest under hackathon time pressure.}
+        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning, and Gunicorn.}
       \end{cvitems}
     }
 
