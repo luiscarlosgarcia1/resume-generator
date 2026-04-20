@@ -31,4 +31,6 @@ coverletter-download: coverletter.pdf
 downloads: coverletter-download cv-download resume-download
 
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf
+	rm -f $(EXAMPLES_DIR)/*.pdf *.pdf
+	rm -f *.aux *.log *.out *.toc *.fls *.dvi *.lot *.lof *-converted-to.* .*sw[op] *~
+	rm -f $(EXAMPLES_DIR)/*.aux $(EXAMPLES_DIR)/*.log $(EXAMPLES_DIR)/*.out $(EXAMPLES_DIR)/*.toc $(EXAMPLES_DIR)/*.fls
