@@ -1,15 +1,14 @@
-%% Start of file `awesome-cv.cls'.
-% Awesome CV Class File
+%% Start of file `cvstyle.cls'.
+% Resume document class — layout, typography, and CV structure commands.
 %
-% https://github.com/posquit0/Awesome-CV
-% Author: Claud D. Park <posquit0.bj@gmail.com>
+% Based on Awesome-CV by Claud D. Park <posquit0.bj@gmail.com>
 % License: LPPL v1.3c (http://www.latex-project.org/lppl)
 
 
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
+\ProvidesClass{cvstyle}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
