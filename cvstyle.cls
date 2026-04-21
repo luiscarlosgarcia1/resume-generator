@@ -44,14 +44,6 @@
 
 
 %-------------------------------------------------------------------------------
-%                Configuration for directory locations
-%-------------------------------------------------------------------------------
-% To use a local fonts/ folder instead of system fonts, call \fontdir[fonts/]
-% in resume.tex and add [Path=\@fontdir] to each font declaration below.
-\newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
-
-
-%-------------------------------------------------------------------------------
 %                Configuration for layout
 %-------------------------------------------------------------------------------
 \geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
@@ -90,34 +82,34 @@
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
-% Fonts are loaded from the system by name. To switch to local font files,
-% call \fontdir[fonts/] in resume.tex and add [Path=\@fontdir] to each
-% declaration below.
 \defaultfontfeatures{Ligatures=TeX, Renderer=HarfBuzz}
 
-\setmainfont{Source Sans 3}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
+\setmainfont{SourceSans3}[
+  Path=fonts/SourceSans3/, Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  FontFace={l}{n}{Font=*-Light},
+  FontFace={l}{it}{Font=*-LightItalic},
 ]
-\setsansfont{Source Sans 3}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
+\setsansfont{SourceSans3}[
+  Path=fonts/SourceSans3/, Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  FontFace={l}{n}{Font=*-Light},
+  FontFace={l}{it}{Font=*-LightItalic},
 ]
 \newfontfamily\roboto{Roboto}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
+  Path=fonts/Roboto/, Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  FontFace={l}{n}{Font=*-Light},
+  FontFace={l}{it}{Font=*-LightItalic},
 ]
 
 \newcommand*{\headerfont}{\roboto}
