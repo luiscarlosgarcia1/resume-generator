@@ -1,53 +1,38 @@
 # resumeGen
 
-Minimal LaTeX setup for generating a resume, CV, and cover letter.
+LaTeX-based resume generator using a custom class file and modular section inputs.
 
-## Assumption
-A TeX distribution is already installed.
+## Requirements
 
-## Quick start
+- [MacTeX](https://www.tug.org/mactex/) (provides `xelatex`)
+- [just](https://github.com/casey/just) — command runner (`brew install just`)
 
-```bash
-cd /usrs/[usr_name]/Documents/resumeGen
-make examples
+## Commands
+
+| Command | Description |
+|---|---|
+| `just build` | Compile resume to PDF |
+| `just clean` | Remove build artifacts |
+
+## Structure
+
+```
+resume.tex          # entry point — personal info and section order
+cvstyle.cls         # custom LaTeX class (styling, layout)
+fonts/              # bundled fonts (Roboto, Source Sans 3)
+master/             # content sections
+  summary.tex
+  education.tex
+  experience.tex
+  projects.tex
+  skills.tex
+  certificates.tex
+  extracurricular.tex
+  volunteer.tex
 ```
 
-This builds:
-- `examples/resume.pdf`
-- `examples/cv.pdf`
-- `examples/coverletter.pdf`
+## Editing
 
-## Build individual files
-
-```bash
-make resume.pdf
-make cv.pdf
-make coverletter.pdf
-```
-
-## Run LaTeX directly (without make)
-
-```bash
-lualatex -output-directory=examples examples/resume.tex
-lualatex -output-directory=examples examples/cv.tex
-lualatex -output-directory=examples examples/coverletter.tex
-```
-
-## Edit content
-- Resume sections: `examples/resume/*.tex`
-- CV sections: `examples/cv/*.tex`
-- Main templates: `examples/resume.tex`, `examples/cv.tex`, `examples/coverletter.tex`
-
-## Useful commands
-
-```bash
-make clean
-make downloads
-```
-
-`make downloads` copies generated PDFs to `~/Downloads` by default.
-Override with:
-
-```bash
-make downloads DOWNLOADS_DIR=/your/path
-```
+- **Personal info** (name, email, links): `resume.tex`
+- **Content**: individual files in `master/`
+- **Styling**: `cvstyle.cls`
