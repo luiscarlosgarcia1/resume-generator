@@ -46,6 +46,7 @@
 %-------------------------------------------------------------------------------
 %                Configuration for layout
 %-------------------------------------------------------------------------------
+% Default margins
 \geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
 
 \fancyhfoffset{0em}
@@ -90,6 +91,8 @@
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
+  FontFace={sb}{n}{Font=*-SemiBold},
+  FontFace={sb}{it}{Font=*-SemiBoldItalic},
   FontFace={l}{n}{Font=*-Light},
   FontFace={l}{it}{Font=*-LightItalic},
 ]
@@ -99,6 +102,8 @@
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
+  FontFace={sb}{n}{Font=*-SemiBold},
+  FontFace={sb}{it}{Font=*-SemiBoldItalic},
   FontFace={l}{n}{Font=*-Light},
   FontFace={l}{it}{Font=*-LightItalic},
 ]
@@ -121,13 +126,13 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Header
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{7.8pt}{1em}\headerfont\color{text} #1}}
 
 % Section structure
-\newcommand*{\sectionstyleface}[1]{{\fontsize{17pt}{1em}\bodyfont\bfseries #1}}
+\newcommand*{\sectionstyleface}[1]{{\fontsize{17pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
   \def\@acvSectionTmp{#1}
   \ifthenelse{\boolean{acvSectionColorHighlight}}{%
