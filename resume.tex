@@ -1,178 +1,49 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
 
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
+% Page margins
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% Accent color — change to swap the highlight color across the whole resume
 \colorlet{awesome}{awesome-darknight}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{3E6D9C}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-\definecolor{darktext}{HTML}{3A3A3A}
-\definecolor{text}{HTML}{2F2F2F}
-\definecolor{graytext}{HTML}{4F4F4F}
-\definecolor{lighttext}{HTML}{8A8A8A}
-\definecolor{sectiondivider}{HTML}{4F4F4F}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
+% Strip accsupp wrapper from the header social separator
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\renewcommand{\acvSectionTopSkip}{0mm}
-
-% ── Font weight hierarchy ────────────────────────────────────────────────────
-% BOLD      (\bodyfont\bfseries)   : section headers, entry titles, skill labels,
-%                                    honor positions, cover-letter section/name
-% SEMIBOLD  (\fontseries{sb})      : header name (first + last)
-% REGULAR   (\bodyfont\mdseries)   : company / position labels, honor titles,
-%                                    metadata dates, sub-entry titles
-% LIGHT     (\bodyfontlight)       : bullet descriptions, dates, locations,
-%                                    skill values, paragraphs
-% ─────────────────────────────────────────────────────────────────────────────
-
-% Header
-\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\fontseries{sb}\selectfont\color{text} #1}}
-\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\fontseries{sb}\selectfont\color{text} #1}}
-\renewcommand*{\headerpositionstyle}[1]{{\fontsize{8.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\renewcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\renewcommand*{\headersocialstyle}[1]{{\fontsize{7.8pt}{1em}\headerfont\mdseries\color{text} #1}}
-\renewcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\mdseries\itshape\color{darktext} #1}}
-\renewcommand*{\footerstyle}[1]{{\fontsize{9pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-
-% Section structure — BOLD
-\renewcommand*{\sectionstyleface}[1]{{\fontsize{17pt}{1em}\bodyfont\bfseries #1}}
-\renewcommand*{\subsectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\textcolor{text}{#1}}}
-\renewcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
-
-% Entry elements
-\renewcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}     % BOLD
-\renewcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\mdseries\scshape\color{graytext} #1}} % REGULAR
-\renewcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}   % LIGHT
-\renewcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}} % LIGHT
-\renewcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}    % LIGHT
-
-% Sub-entry elements
-\renewcommand*{\subentrytitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\mdseries\color{graytext} #1}}   % REGULAR
-\renewcommand*{\subentrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\scshape\color{graytext} #1}} % REGULAR
-\renewcommand*{\subentrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}} % LIGHT
-\renewcommand*{\subentrylocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}} % LIGHT
-\renewcommand*{\subdescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}  % LIGHT
-
-% Honor elements
-\renewcommand*{\honorpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}  % BOLD
-\renewcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\mdseries\color{graytext} #1}}     % REGULAR
-\renewcommand*{\honordatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{graytext} #1}}           % LIGHT
-\renewcommand*{\honorlocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}} % LIGHT
-
-% Skill elements
-\renewcommand*{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}      % BOLD
-\renewcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}               % LIGHT
-
-% Cover letter elements — fixes cls bug: \bodyfontlight\bfseries (contradictory)
-\renewcommand*{\lettersectionstyleface}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries #1}}              % BOLD
-\renewcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}} % BOLD
-\renewcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} \underline{#1}}} % BOLD (was bodyfontlight\bfseries)
-\renewcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}     % BOLD
-\renewcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}  % LIGHT
-\renewcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfontlight\upshape\color{graytext}}       % LIGHT
-\renewcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}} % LIGHT
 
 
 %-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
+% PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
 \name{Luis}{Carlos Garcia}
-% \position{Undergraduate Student{\enskip\cdotp\enskip}Computer Science}
 \address{McAllen, Texas, United States of America}
-
 \mobile{+1 (956) 735-4232}
-%\whatsapp{(+82) 10-9030-1843}
-% \email{luis.c.garcia101@gmail.com}
-%\dateofbirth{January 1st, 1970}
-% \homepage{FIX ME}
-% \github{luiscarlosgarcia1}
-% \linkedin{luis-carlos-garcia-4156a8386}
-\extrainfo{\href{mailto:luis.c.garcia101@gmail.com}{\faEnvelope\ luis.c.garcia101@gmail.com}\acvHeaderSocialSep\href{https://github.com/luiscarlosgarcia1}{\faSquareGithub\ GitHub}\acvHeaderSocialSep\href{https://www.linkedin.com/in/luis-carlos-garcia-4156a8386}{\faLinkedin\ LinkedIn}}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \x{x-id}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \kaggle{kaggle-id}
-% \hackerrank{hackerrank-id}
-% \telegram{telegram-username}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra information}
-
-% \quote{``Be the change that you want to see in the world."}
+\extrainfo{%
+  \href{mailto:luis.c.garcia101@gmail.com}{\faEnvelope\ luis.c.garcia101@gmail.com}%
+  \acvHeaderSocialSep
+  \href{https://github.com/luiscarlosgarcia1}{\faSquareGithub\ GitHub}%
+  \acvHeaderSocialSep
+  \href{https://www.linkedin.com/in/luis-carlos-garcia-4156a8386}{\faLinkedin\ LinkedIn}%
+}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal information
-% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-% \makecvfooter
-%   {\today}
-%   {Byungjin Park~~~·~~~Résumé}
-%   {\thepage}
+\input{master/summary.tex}
+\input{master/education.tex}
+\input{master/extracurricular.tex}
+\input{master/projects.tex}
+\input{master/experience.tex}
+\input{master/volunteer.tex}
+\input{master/certificates.tex}
+\input{master/skills.tex}
 
-
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-
-\input{resume/summary.tex}
-\input{resume/education.tex}
-\input{resume/projects.tex}
-\input{resume/experience.tex}
-%\input{resume/volunteer.tex}
-%\input{resume/extracurricular.tex}
-\input{resume/skills.tex}
-% \input{resume/honors.tex}
-
-% \input{resume/certificates.tex}
-% \input{resume/presentation.tex}
-% \input{resume/writing.tex}
-% \input{resume/committees.tex}
-
-
-%-------------------------------------------------------------------------------
 \end{document}
