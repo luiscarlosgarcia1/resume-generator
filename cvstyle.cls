@@ -146,11 +146,11 @@
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{lighttext} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
-% Honor elements
-\newcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
+% Certificate elements
+\newcommand*{\certificatetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\certificatepositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\certificatedatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\certificatelocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
 \newcommand*{\skilltypestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{text} #1}}
@@ -181,13 +181,13 @@
 %-------------------------------------------------------------------------------
 \newcommand{\acvHeaderNameDelim}{\space}
 \newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterAddressSkip}{-.8mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
 
-\newcommand{\acvSectionTopSkip}{0mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{-1mm}
+\newcommand{\acvSectionContentTopSkip}{1.5mm}
 
 
 %-------------------------------------------------------------------------------
@@ -239,7 +239,7 @@
 
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{-2.25mm}
   \paragraphstyle
 }{%
   \par
@@ -268,9 +268,9 @@
   \end{tabular*}%
 }
 
-\newenvironment{cvhonors}{%
+\newenvironment{cvcertificates}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{-2.25mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -280,8 +280,8 @@
   \end{center}
 }
 
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}\ifempty{#2}{}{,} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+\newcommand*{\cvcertificate}[4]{%
+  \certificatedatestyle{#4} & \certificatepositionstyle{#1}\ifempty{#2}{}{,} \certificatetitlestyle{#2} & \certificatelocationstyle{#3} \\
 }
 
 \newenvironment{cvskills}{%
