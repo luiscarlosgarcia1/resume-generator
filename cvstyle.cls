@@ -290,7 +290,7 @@
   \setlength{\extrarowheight}{0pt}
   \setlength{\parskip}{0pt}
   \renewcommand{\arraystretch}{0.85}
-  \tabularx{\textwidth}{@{}L{3cm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
+  \tabularx{\textwidth}{@{}L{3.8cm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
 }{%
   \endtabularx\par
 }
