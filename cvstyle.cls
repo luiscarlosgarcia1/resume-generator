@@ -59,13 +59,15 @@
 %                Configuration for colors
 %-------------------------------------------------------------------------------
 % Text colors
-\definecolor{darktext}{HTML}{3A3A3A}
-\definecolor{text}{HTML}{2F2F2F}
-\definecolor{graytext}{HTML}{4F4F4F}
-\definecolor{lighttext}{HTML}{8A8A8A}
-\definecolor{sectiondivider}{HTML}{4F4F4F}
+\definecolor{darkertext}{HTML}{1C1C1C}
+\definecolor{darktext}{HTML}{272727}
+\definecolor{text}{HTML}{313131}
+\definecolor{graytext}{HTML}{393939}
+\definecolor{lighttext}{HTML}{585858}
+\definecolor{sectiondivider}{HTML}{888888}
 
 % Accent palette
+\definecolor{awesome-black}{HTML}{1C1C1C}
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
 \definecolor{awesome-red}{HTML}{DC3522}
@@ -126,38 +128,33 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Header
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{27pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{graytext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{graytext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{22pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{22pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{darktext} #1}}
 
 % Section structure
-\newcommand*{\sectionstyleface}[1]{{\fontsize{17pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
+\newcommand*{\sectionstyleface}[1]{{\fontsize{15pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
-  \def\@acvSectionTmp{#1}
-  \ifthenelse{\boolean{acvSectionColorHighlight}}{%
-    \StrSplit{\@acvSectionTmp}{3}{\acvSectionStringAwesome}{\acvSectionStringPlain}%
-      \color{awesome}\sectionstyleface{\acvSectionStringAwesome%
-      \color{text}{\acvSectionStringPlain}}}%
-      {\color{text}\sectionstyleface{\@acvSectionTmp}}}
-\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
+  \color{darkertext}\sectionstyleface{#1}}
+\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{graytext}}
 
 % Entry elements
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\addfontfeature{Letters=SmallCaps}\color{text} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % Honor elements
-\newcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{text} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\honordatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{graytext} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -306,7 +303,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.75pt]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\textbullet}
 }{%
