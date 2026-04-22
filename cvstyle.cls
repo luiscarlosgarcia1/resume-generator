@@ -128,23 +128,23 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Header
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{22pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{22pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{text} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{darktext} #1}}
 
 % Section structure
-\newcommand*{\sectionstyleface}[1]{{\fontsize{15pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
+\newcommand*{\sectionstyleface}[1]{{\fontsize{18pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
   \color{darkertext}\sectionstyleface{#1}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % Entry elements
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{lighttext} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % Certificate elements
 \newcommand*{\certificatetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
@@ -153,8 +153,8 @@
 \newcommand*{\certificatelocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
-\newcommand*{\skilltypestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -180,14 +180,14 @@
 %                Commands for extra
 %-------------------------------------------------------------------------------
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.8mm}
+\newcommand{\acvHeaderAfterNameSkip}{.508mm}
+\newcommand{\acvHeaderAfterAddressSkip}{-.616mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{7.623mm}
 
-\newcommand{\acvSectionTopSkip}{-1mm}
-\newcommand{\acvSectionContentTopSkip}{1.5mm}
+\newcommand{\acvSectionTopSkip}{-.770mm}
+\newcommand{\acvSectionContentTopSkip}{1.906mm}
 
 
 %-------------------------------------------------------------------------------
@@ -239,11 +239,11 @@
 
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.25mm}
+  \vspace{-1.731mm}
   \paragraphstyle
 }{%
   \par
-  \vspace{2mm}
+  \vspace{2.541mm}
 }
 
 \newenvironment{cventries}{%
@@ -254,7 +254,7 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-1.539mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -270,7 +270,7 @@
 
 \newenvironment{cvcertificates}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.25mm}
+  \vspace{-1.731mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -289,8 +289,8 @@
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \setlength{\parskip}{0pt}
-  \renewcommand{\arraystretch}{0.85}
-  \tabularx{\textwidth}{@{}L{3.8cm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
+  \renewcommand{\arraystretch}{0.9}
+  \tabularx{\textwidth}{@{}L{40mm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
 }{%
   \endtabularx\par
 }
@@ -300,13 +300,13 @@
 }
 
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-3.078mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.75pt]
+  \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.953pt]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\textbullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{1.0mm}
+  \vspace{1.271mm}
 }
