@@ -286,14 +286,13 @@
 
 \newenvironment{cvskills}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \setlength{\parskip}{0pt}
-    \renewcommand{\arraystretch}{0.85}
-    \tabularx{\textwidth}{r@{\hskip 1ex}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \setlength{\parskip}{0pt}
+  \renewcommand{\arraystretch}{0.85}
+  \tabularx{\textwidth}{@{}L{3cm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
 }{%
-\endtabularx\par
+  \endtabularx\par
 }
 
 \newcommand*{\cvskill}[2]{%
