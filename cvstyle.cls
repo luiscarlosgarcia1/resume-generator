@@ -301,6 +301,7 @@
 
 \newenvironment{cvitems}{%
   \vspace{-3.078mm}
+  \fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}\selectfont
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.953pt]
     \setlength{\parskip}{0pt}
