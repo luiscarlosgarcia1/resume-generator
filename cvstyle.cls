@@ -137,7 +137,7 @@
 \newcommand*{\sectionstyleface}[1]{{\fontsize{15pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
   \color{darkertext}\sectionstyleface{#1}}
-\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % Entry elements
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
