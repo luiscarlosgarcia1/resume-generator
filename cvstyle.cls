@@ -41,6 +41,24 @@
 \RequirePackage[hidelinks,unicode,pdfpagelabels=false]{hyperref}
 \hypersetup{pdftitle={}, pdfauthor={}, pdfsubject={}, pdfkeywords={}}
 \RequirePackage{bookmark}
+\RequirePackage{anyfontsize}
+\RequirePackage{pgfmath}
+
+
+%-------------------------------------------------------------------------------
+%                Global scale variables
+%-------------------------------------------------------------------------------
+\pgfmathsetmacro{\fontscale}{1.0}
+\pgfmathsetmacro{\spacingscale}{1.0}
+
+\newcommand{\scaledfont}[1]{%
+  \pgfmathsetmacro{\@sfsize}{#1 * \fontscale}%
+  \pgfmathsetmacro{\@sfskip}{\@sfsize * \spacingscale}%
+  \fontsize{\@sfsize pt}{\@sfskip pt}%
+}
+
+% \scaledspacing is intentionally absent — pgfmathsetmacro cannot run inside
+% dimension-scanning contexts. Precompute with \pgfmathsetmacro before each use.
 
 
 %-------------------------------------------------------------------------------
@@ -128,33 +146,33 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Header
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{text} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{darktext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\scaledfont{24}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\scaledfont{24}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\scaledfont{9}\headerfont\itshape\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\scaledfont{8}\headerfont\color{darktext} #1}}
 
 % Section structure
-\newcommand*{\sectionstyleface}[1]{{\fontsize{18pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
+\newcommand*{\sectionstyleface}[1]{{\scaledfont{18}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
   \color{darkertext}\sectionstyleface{#1}}
-\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\paragraphstyle}{\scaledfont{10}\bodyfontlight\upshape\color{text}}
 
 % Entry elements
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\scaledfont{12}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\scaledfont{10}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\entrydatestyle}[1]{{\scaledfont{10}\bodyfontlight\slshape\color{lighttext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\scaledfont{10}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\descriptionstyle}[1]{{\scaledfont{10}\bodyfontlight\upshape\color{text} #1}}
 
 % Certificate elements
-\newcommand*{\certificatetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\certificatepositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\certificatedatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
-\newcommand*{\certificatelocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\certificatetitlestyle}[1]{{\scaledfont{10}\bodyfont\color{graytext} #1}}
+\newcommand*{\certificatepositionstyle}[1]{{\scaledfont{10}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\certificatedatestyle}[1]{{\scaledfont{10}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\certificatelocationstyle}[1]{{\scaledfont{10}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\scaledfont{10}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\scaledfont{10}\bodyfontlight\upshape\color{text} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -180,14 +198,19 @@
 %                Commands for extra
 %-------------------------------------------------------------------------------
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.508mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.616mm}
+\pgfmathsetmacro{\@acvAfterNameSkip}{0.508 * \spacingscale}
+\newcommand{\acvHeaderAfterNameSkip}{\@acvAfterNameSkip mm}
+\pgfmathsetmacro{\@acvAfterAddressSkip}{-0.616 * \spacingscale}
+\newcommand{\acvHeaderAfterAddressSkip}{\@acvAfterAddressSkip mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{7.623mm}
+\pgfmathsetmacro{\@acvAfterSocialSkip}{7.623 * \spacingscale}
+\newcommand{\acvHeaderAfterSocialSkip}{\@acvAfterSocialSkip mm}
 
-\newcommand{\acvSectionTopSkip}{-.770mm}
-\newcommand{\acvSectionContentTopSkip}{1.906mm}
+\pgfmathsetmacro{\@acvSectionTopSkip}{-0.770 * \spacingscale}
+\newcommand{\acvSectionTopSkip}{\@acvSectionTopSkip mm}
+\pgfmathsetmacro{\@acvSectionContentTopSkip}{1.906 * \spacingscale}
+\newcommand{\acvSectionContentTopSkip}{\@acvSectionContentTopSkip mm}
 
 
 %-------------------------------------------------------------------------------
@@ -239,11 +262,13 @@
 
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-1.731mm}
+  \pgfmathsetmacro{\@cvparatop}{-1.731 * \spacingscale}%
+  \vspace{\@cvparatop mm}
   \paragraphstyle
 }{%
   \par
-  \vspace{2.541mm}
+  \pgfmathsetmacro{\@cvparabot}{2.541 * \spacingscale}%
+  \vspace{\@cvparabot mm}
 }
 
 \newenvironment{cventries}{%
@@ -254,7 +279,8 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{-1.539mm}
+  \pgfmathsetmacro{\@cventrytop}{-1.539 * \spacingscale}%
+  \vspace{\@cventrytop mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -270,7 +296,8 @@
 
 \newenvironment{cvcertificates}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-1.731mm}
+  \pgfmathsetmacro{\@cvcerttop}{-1.731 * \spacingscale}%
+  \vspace{\@cvcerttop mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -289,7 +316,8 @@
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \setlength{\parskip}{0pt}
-  \renewcommand{\arraystretch}{0.9}
+  \pgfmathsetmacro{\@arraystretch}{0.9 * \spacingscale}%
+  \renewcommand{\arraystretch}{\@arraystretch}
   \tabularx{\textwidth}{@{}L{40mm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
 }{%
   \endtabularx\par
@@ -300,14 +328,17 @@
 }
 
 \newenvironment{cvitems}{%
-  \vspace{-3.078mm}
-  \fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}\selectfont
+  \pgfmathsetmacro{\@cvitemstop}{-3.078 * \spacingscale}%
+  \vspace{\@cvitemstop mm}
+  \scaledfont{10}\bodyfontlight\upshape\color{text}\selectfont
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.953pt]
+  \pgfmathsetmacro{\@itemsep}{0.953 * \spacingscale}%
+  \begin{itemize}[leftmargin=2ex, nosep, itemsep=\@itemsep pt]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\textbullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{1.271mm}
+  \pgfmathsetmacro{\@cvitemsbot}{1.271 * \spacingscale}%
+  \vspace{\@cvitemsbot mm}
 }
