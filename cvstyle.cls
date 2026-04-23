@@ -48,8 +48,8 @@
 %-------------------------------------------------------------------------------
 %                Global scale variables
 %-------------------------------------------------------------------------------
-\pgfmathsetmacro{\fontscale}{1.0}
-\pgfmathsetmacro{\spacingscale}{1.0}
+\pgfmathsetmacro{\fontscale}{1.05}
+\pgfmathsetmacro{\spacingscale}{1.15}
 
 \newcommand{\scaledfont}[1]{%
   \pgfmathsetmacro{\@sfsize}{#1 * \fontscale}%
