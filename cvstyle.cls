@@ -57,10 +57,8 @@
   \fontsize{\@sfsize pt}{\@sfskip pt}%
 }
 
-\newcommand{\scaledspacing}[1]{%
-  \pgfmathsetmacro{\@sspacing}{#1 * \spacingscale}%
-  \@sspacing mm%
-}
+% \scaledspacing is intentionally absent — pgfmathsetmacro cannot run inside
+% dimension-scanning contexts. Precompute with \pgfmathsetmacro before each use.
 
 
 %-------------------------------------------------------------------------------
@@ -200,14 +198,19 @@
 %                Commands for extra
 %-------------------------------------------------------------------------------
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{\scaledspacing{0.508}}
-\newcommand{\acvHeaderAfterAddressSkip}{\scaledspacing{-0.616}}
+\pgfmathsetmacro{\@acvAfterNameSkip}{0.508 * \spacingscale}
+\newcommand{\acvHeaderAfterNameSkip}{\@acvAfterNameSkip mm}
+\pgfmathsetmacro{\@acvAfterAddressSkip}{-0.616 * \spacingscale}
+\newcommand{\acvHeaderAfterAddressSkip}{\@acvAfterAddressSkip mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{\scaledspacing{7.623}}
+\pgfmathsetmacro{\@acvAfterSocialSkip}{7.623 * \spacingscale}
+\newcommand{\acvHeaderAfterSocialSkip}{\@acvAfterSocialSkip mm}
 
-\newcommand{\acvSectionTopSkip}{\scaledspacing{-0.770}}
-\newcommand{\acvSectionContentTopSkip}{\scaledspacing{1.906}}
+\pgfmathsetmacro{\@acvSectionTopSkip}{-0.770 * \spacingscale}
+\newcommand{\acvSectionTopSkip}{\@acvSectionTopSkip mm}
+\pgfmathsetmacro{\@acvSectionContentTopSkip}{1.906 * \spacingscale}
+\newcommand{\acvSectionContentTopSkip}{\@acvSectionContentTopSkip mm}
 
 
 %-------------------------------------------------------------------------------
@@ -259,11 +262,13 @@
 
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{\scaledspacing{-1.731}}
+  \pgfmathsetmacro{\@cvparatop}{-1.731 * \spacingscale}%
+  \vspace{\@cvparatop mm}
   \paragraphstyle
 }{%
   \par
-  \vspace{\scaledspacing{2.541}}
+  \pgfmathsetmacro{\@cvparabot}{2.541 * \spacingscale}%
+  \vspace{\@cvparabot mm}
 }
 
 \newenvironment{cventries}{%
@@ -274,7 +279,8 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{\scaledspacing{-1.539}}
+  \pgfmathsetmacro{\@cventrytop}{-1.539 * \spacingscale}%
+  \vspace{\@cventrytop mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -290,7 +296,8 @@
 
 \newenvironment{cvcertificates}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{\scaledspacing{-1.731}}
+  \pgfmathsetmacro{\@cvcerttop}{-1.731 * \spacingscale}%
+  \vspace{\@cvcerttop mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -321,7 +328,8 @@
 }
 
 \newenvironment{cvitems}{%
-  \vspace{\scaledspacing{-3.078}}
+  \pgfmathsetmacro{\@cvitemstop}{-3.078 * \spacingscale}%
+  \vspace{\@cvitemstop mm}
   \scaledfont{10}\bodyfontlight\upshape\color{text}\selectfont
   \begin{justify}
   \pgfmathsetmacro{\@itemsep}{0.953 * \spacingscale}%
@@ -331,5 +339,6 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{\scaledspacing{1.271}}
+  \pgfmathsetmacro{\@cvitemsbot}{1.271 * \spacingscale}%
+  \vspace{\@cvitemsbot mm}
 }
