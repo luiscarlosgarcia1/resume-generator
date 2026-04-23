@@ -10,46 +10,60 @@
 \begin{cventries}
 
 %---------------------------------------------------------
-%  \cventry
-%    {Independent Project | Python, Lua | Typed Observer + Runtime (In Progress)} % Subheader
-%    {Balatro AI (Live-State Exporter + Runtime)} % Project title
-%    {} % Location
-%    {Mar. 2026 - Present} % Date(s)
-%    {
-%      \begin{cvitems}
-%        \item {Built a Steamodded-compatible Lua exporter and Python observer pipeline that converts live Balatro state into typed GameObservation snapshots instead of relying on stale save-file reads.}
-%        \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop for exercising actions before UI automation.}
-%      \end{cvitems}
-%    }
+  \cventry
+    {Independent Project | Python, Lua | (In Progress)} % Subheader
+    {Balatro AI (Live-State Exporter + Runtime)} % Project title
+    {} % Location
+    {Mar. 2026 - Present} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Built a Steamodded Lua exporter and Python observer pipeline that reads live Balatro game state as snapshots.}
+        \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
-%  \cventry
-%    {Independent Project | C++, React | Localhost Prototype} % Subheader
-%    {Pathfinding Visualizer (Local Web App)} % Project title
-%    {} % Location
-%    {Sept. 2025 - Present} % Date(s)
-%    {
-%      \begin{cvitems}
-%        \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured logic so each algorithm could be visualized and compared.}
-%        \item {Built a React web UI to display grid-based exploration and shortest-path results, including controls for running scenarios.}
-%        \item {Optimized JSON serialization by encoding cell states as index lists, nearly doubling responsive grid size from ~2,500 to ~4,800 cells.}
-%        \item {Organized cell-state data into data structures for average-case O(1) cell lookup, reducing step-processing latency on larger grids by ~35\%.}
-%      \end{cvitems}
-%    }
+  \cventry
+    {Independent Project | C++, React | Localhost Prototype} % Subheader
+    {Pathfinding Visualizer (Local Web App)} % Project title
+    {} % Location
+    {Sept. 2025 - Feb. 2026} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured logic so each algorithm could be visualized and compared.}
+        \item {Built a React web UI to display grid-based exploration and shortest-path results, including controls for running scenarios.}
+        \item {Optimized JSON serialization by encoding cell states as index lists, nearly doubling responsive grid size from ~2,500 to ~4,800 cells.}
+        %\item {Organized cell-state data into data structures for average-case O(1) cell lookup, reducing step-processing latency on larger grids by ~35\%.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
-%  \cventry
-%    {1st Place Hackathon | Python, Flask, PostgreSQL | Deployed on Railway} % Subheader
-%    {Civic Hearing Summarizer \& Public Comment Analyzer} % Project title
-%    {} % Location
-%    {Apr. 2026} % Date(s)
-%    {
-%      \begin{cvitems}
-%        \item {Built a Flask app that ingests public hearing transcripts via the YouTube Transcript API and runs them through an LLM summarization pipeline to produce plain-language summaries.}
-%        \item {Implemented a Groq inference API-backed clustering service to group public comments into thematic concern areas and surface community viewpoints.}
-%        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning, and Gunicorn.}
-%      \end{cvitems}
-%    }
+  \cventry
+    {1st Place Hackathon | Python, Flask, PostgreSQL | Deployed on Railway} % Subheader
+    {Civic Hearing Summarizer \& Public Comment Analyzer} % Project title
+    {} % Location
+    {Apr. 2026} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Built a Flask app that ingests public hearing transcripts via YouTube API and produces plain-language LLM summaries.}
+        \item {Implemented a Groq-backed clustering service to group public comments into thematic concern areas.}
+        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning, and Gunicorn.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Team Project | React, Express, SQLite | Local Prototype (In Progress)} % Subheader
+    {UTRGV Inventor-Builder Matching App} % Project title
+    {} % Location
+    {Feb. 2026 - Present} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Built a React/Vite frontend with role-based routing and login/signup flows for student and business onboarding.}
+        \item {Developed an Express + SQLite backend with JSON APIs, hashed passwords, input validation, and duplicate-email handling.}
+        \item {Implemented profile creation flows and a swipe-style home feed prototype for surfacing match preferences.}
+      \end{cvitems}
+    }
 
 %---------------------------------------------------------
 \end{cventries}

@@ -1,3 +1,16 @@
+\iffalse
+%---------------------------------------------------------
+% ORIGINAL SKILL ENTRIES (7 categories)
+%---------------------------------------------------------
+  \cvskill{Languages}{C++, C, Python, SQL}
+  \cvskill{Frameworks}{React, Flask, Express, Django, FastAPI}
+  \cvskill{Databases}{PostgreSQL, SQLite, SQLAlchemy}
+  \cvskill{Testing}{Unit Testing, Integration Testing, Contract Testing, Debugging}
+  \cvskill{Deployment}{Railway, Gunicorn, DB Migrations, Linux}
+  \cvskill{Developer Tools}{Git/GitHub, REST APIs, Performance Optimization}
+  \cvskill{AI \& Automation}{Agentic Workflows, LLM Integration, Task Automation, Output Validation}
+\fi
+
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
@@ -7,21 +20,6 @@
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
-\makeatletter
-\renewenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \tabularx{\textwidth}{@{}L{3.2cm}@{\hspace{1.2ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
-}{%
-\endtabularx\par
-}
-\renewcommand*{\cvskill}[2]{%
-  \skilltypestyle{#1} & \leavevmode\skillsetstyle{#2} \\
-}
-\makeatother
-
 \begin{cvskills}
 
 %---------------------------------------------------------

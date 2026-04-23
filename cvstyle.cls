@@ -46,6 +46,7 @@
 %-------------------------------------------------------------------------------
 %                Configuration for layout
 %-------------------------------------------------------------------------------
+% Default margins
 \geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
 
 \fancyhfoffset{0em}
@@ -58,13 +59,15 @@
 %                Configuration for colors
 %-------------------------------------------------------------------------------
 % Text colors
-\definecolor{darktext}{HTML}{3A3A3A}
-\definecolor{text}{HTML}{2F2F2F}
-\definecolor{graytext}{HTML}{4F4F4F}
-\definecolor{lighttext}{HTML}{8A8A8A}
-\definecolor{sectiondivider}{HTML}{4F4F4F}
+\definecolor{darkertext}{HTML}{1C1C1C}
+\definecolor{darktext}{HTML}{272727}
+\definecolor{text}{HTML}{313131}
+\definecolor{graytext}{HTML}{393939}
+\definecolor{lighttext}{HTML}{585858}
+\definecolor{sectiondivider}{HTML}{888888}
 
 % Accent palette
+\definecolor{awesome-black}{HTML}{1C1C1C}
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
 \definecolor{awesome-red}{HTML}{DC3522}
@@ -90,6 +93,8 @@
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
+  FontFace={sb}{n}{Font=*-SemiBold},
+  FontFace={sb}{it}{Font=*-SemiBoldItalic},
   FontFace={l}{n}{Font=*-Light},
   FontFace={l}{it}{Font=*-LightItalic},
 ]
@@ -99,6 +104,8 @@
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
+  FontFace={sb}{n}{Font=*-SemiBold},
+  FontFace={sb}{it}{Font=*-SemiBoldItalic},
   FontFace={l}{n}{Font=*-Light},
   FontFace={l}{it}{Font=*-LightItalic},
 ]
@@ -121,38 +128,33 @@
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Header
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{27.5pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{7.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{24pt}{1em}\headerfont\bfseries\color{darkertext} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{darktext} #1}}
 
 % Section structure
-\newcommand*{\sectionstyleface}[1]{{\fontsize{17pt}{1em}\bodyfont\bfseries #1}}
+\newcommand*{\sectionstyleface}[1]{{\fontsize{18pt}{1em}\bodyfont\fontseries{sb}\selectfont #1}}
 \newcommand*{\sectionstyle}[1]{%
-  \def\@acvSectionTmp{#1}
-  \ifthenelse{\boolean{acvSectionColorHighlight}}{%
-    \StrSplit{\@acvSectionTmp}{3}{\acvSectionStringAwesome}{\acvSectionStringPlain}%
-      \color{awesome}\sectionstyleface{\acvSectionStringAwesome%
-      \color{text}{\acvSectionStringPlain}}}%
-      {\color{text}\sectionstyleface{\@acvSectionTmp}}}
-\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
+  \color{darkertext}\sectionstyleface{#1}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % Entry elements
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
-% Honor elements
-\newcommand*{\honortitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+% Certificate elements
+\newcommand*{\certificatetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\certificatepositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\certificatedatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
+\newcommand*{\certificatelocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
-\newcommand*{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -178,14 +180,14 @@
 %                Commands for extra
 %-------------------------------------------------------------------------------
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterNameSkip}{.508mm}
+\newcommand{\acvHeaderAfterAddressSkip}{-.616mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{7.623mm}
 
-\newcommand{\acvSectionTopSkip}{0mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{-.770mm}
+\newcommand{\acvSectionContentTopSkip}{1.906mm}
 
 
 %-------------------------------------------------------------------------------
@@ -237,11 +239,11 @@
 
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{-1.731mm}
   \paragraphstyle
 }{%
   \par
-  \vspace{2mm}
+  \vspace{2.541mm}
 }
 
 \newenvironment{cventries}{%
@@ -252,7 +254,7 @@
 }
 
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-1.539mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -266,9 +268,9 @@
   \end{tabular*}%
 }
 
-\newenvironment{cvhonors}{%
+\newenvironment{cvcertificates}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{-1.731mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -278,18 +280,19 @@
   \end{center}
 }
 
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}\ifempty{#2}{}{,} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+\newcommand*{\cvcertificate}[4]{%
+  \certificatedatestyle{#4} & \certificatepositionstyle{#1}\ifempty{#2}{}{,} \certificatetitlestyle{#2} & \certificatelocationstyle{#3} \\
 }
 
 \newenvironment{cvskills}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \tabularx{\textwidth}{r>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \setlength{\parskip}{0pt}
+  \renewcommand{\arraystretch}{0.9}
+  \tabularx{\textwidth}{@{}L{40mm}@{\hspace{0.5ex}}>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X@{}}
 }{%
-\endtabularx\par
+  \endtabularx\par
 }
 
 \newcommand*{\cvskill}[2]{%
@@ -297,13 +300,14 @@
 }
 
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-3.078mm}
+  \fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}\selectfont
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, nosep, itemsep=0.953pt]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\textbullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{1.0mm}
+  \vspace{1.271mm}
 }
