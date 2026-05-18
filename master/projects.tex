@@ -11,14 +11,15 @@
 
 %---------------------------------------------------------
   \cventry
-    {Independent Project | Python, Lua | (In Progress)} % Subheader
+    {Integration Project | Python, Lua, Gymnasium, PPO | (In Progress)} % Subheader
     {Balatro AI (Live-State Exporter + Runtime)} % Project title
     {} % Location
     {Mar. 2026 - Present} % Date(s)
     {
       \begin{cvitems}
-        \item {Built a Steamodded Lua exporter and Python observer pipeline that reads live Balatro game state as snapshots.}
-        \item {Designed a modular runtime with explicit observer, policy, validator, and executor seams, plus a demo decision loop.}
+        \item {Integrated inherited `balatrobot` and `balatro-gym` code into a live RL pipeline connecting Balatro's JSON-RPC API to a Gymnasium environment.}
+        \item {Adapted observation and action wiring so pretrained PPO work can transfer more cleanly to the live game API; next iterations will target Recurrent PPO.}
+        \item {Improved macOS runtime throughput to support more concurrent live instances; upcoming work will extend a higher-fidelity Python simulator for cloud training.}
       \end{cvitems}
     }
 
@@ -59,9 +60,9 @@
     {Feb. 2026 - Present} % Date(s)
     {
       \begin{cvitems}
-        \item {Built a React/Vite frontend with role-based routing and login/signup flows for student and business onboarding.}
-        \item {Developed an Express + SQLite backend with JSON APIs, hashed passwords, input validation, and duplicate-email handling.}
-        \item {Implemented profile creation flows and a swipe-style home feed prototype for surfacing match preferences.}
+        \item {Built a React/Vite frontend with React Router, role-based login/signup, and profile onboarding for inventors and builders.}
+        \item {Developed an Express + SQLite backend with bcrypt auth, input validation, profile upserts, and REST-style JSON APIs.}
+        \item {Implemented a discover feed with swipe actions, mutual-match creation, and polling-based direct messaging.}
       \end{cvitems}
     }
 
