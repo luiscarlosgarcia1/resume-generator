@@ -2,7 +2,7 @@
 build:
     @xelatex -interaction=batchmode resume.tex > /dev/null 2>&1 \
         && grep -E "^Output written|^Transcript written" resume.log \
-        && cp resume.pdf ~/Downloads/resume.pdf \
+        && (cp resume.pdf ~/Downloads/resume.pdf 2>/dev/null || true) \
         || (grep "^!" resume.log | sort -u; exit 1)
 
 # Merge main into all other local branches

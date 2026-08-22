@@ -156,10 +156,9 @@
 \newcommand*{\sectionstyle}[1]{%
   \color{darkertext}\sectionstyleface{#1}}
 \newcommand*{\paragraphstyle}{\scaledfont{10}\bodyfontlight\upshape\color{text}}
-
 % Entry elements
 \newcommand*{\entrytitlestyle}[1]{{\scaledfont{12}\bodyfont\fontseries{sb}\selectfont\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\scaledfont{10}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\scaledfont{8.5}\bodyfont\color{text} \MakeUppercase{#1}}}
 \newcommand*{\entrydatestyle}[1]{{\scaledfont{10}\bodyfontlight\slshape\color{lighttext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\scaledfont{10}\bodyfontlight\color{lighttext} #1}}
 \newcommand*{\descriptionstyle}[1]{{\scaledfont{10}\bodyfontlight\upshape\color{text} #1}}
@@ -171,7 +170,7 @@
 \newcommand*{\certificatelocationstyle}[1]{{\scaledfont{10}\bodyfontlight\color{lighttext} #1}}
 
 % Skill elements
-\newcommand*{\skilltypestyle}[1]{{\scaledfont{10}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\scaledfont{8.5}\bodyfont\color{text} \MakeUppercase{#1}}}
 \newcommand*{\skillsetstyle}[1]{{\scaledfont{10}\bodyfontlight\upshape\color{text} #1}}
 
 
