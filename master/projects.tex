@@ -17,8 +17,8 @@
     {Mar. 2026 - Present} % Date(s)
     {
       \begin{cvitems}
-        \item {Integrated inherited `balatrobot` and `balatro-gym` code into a live RL pipeline connecting Balatro's JSON-RPC API to a Gymnasium environment.}
-        \item {Adapted observation and action wiring so pretrained PPO work can transfer more cleanly to the live game API; next iterations will target Recurrent PPO.}
+        \item {Integrated inherited `balatrobot` code into a live RL pipeline connecting Balatro's JSON-RPC API to a Gymnasium environment.}
+        \item {Adapted observation and action wiring so pretrained PPO work can transfer more cleanly to the live game API.}
         \item {Improved macOS runtime throughput to support more concurrent live instances; upcoming work will extend a higher-fidelity Python simulator for cloud training.}
       \end{cvitems}
     }
@@ -33,8 +33,8 @@
       \begin{cvitems}
         \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured logic so each algorithm could be visualized and compared.}
         \item {Built a React web UI to display grid-based exploration and shortest-path results, including controls for running scenarios.}
-        \item {Optimized JSON serialization by encoding cell states as index lists, nearly doubling responsive grid size from ~2,500 to ~4,800 cells.}
-        %\item {Organized cell-state data into data structures for average-case O(1) cell lookup, reducing step-processing latency on larger grids by ~35\%.}
+        \item {Optimized JSON serialization by encoding cell states as index lists, nearly doubling responsive grid size.}
+        \item {Organized cell-state data into data structures for average-case O(1) cell lookup.}
       \end{cvitems}
     }
 
@@ -48,7 +48,7 @@
       \begin{cvitems}
         \item {Built a Flask app that ingests public hearing transcripts via YouTube API and produces plain-language LLM summaries.}
         \item {Implemented a Groq-backed clustering service to group public comments into thematic concern areas.}
-        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning, and Gunicorn.}
+        \item {Deployed to Railway with a managed PostgreSQL database, Flask-Migrate and Alembic for schema versioning.}
       \end{cvitems}
     }
 
