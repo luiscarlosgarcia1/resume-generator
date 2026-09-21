@@ -32,34 +32,34 @@
     {
       \begin{cvitems}
         \item {Built and deployed a full-stack analytics dashboard used to evaluate NBA lineups from possession-level data.}
-        \item {Implemented a Django REST API that generates every team-specific 1--5 player combination and calculates various statlines.}
-        \item {Created an Angular interface with lineup-size, team, sample-size, ranking, and sort controls plus side-by-side comparison.}
+        \item {Implemented a Django REST API that generates every 1--5 player combination and calculates various statlines.}
+        \item {Created an Angular interface with lineup-size, team, sample-size, ranking, and ordering plus side-by-side comparison.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {Integration Project | Python, Lua, Gymnasium, PPO | (In Progress)} % Subheader
-    {Balatro AI (Live-State Exporter + Runtime)} % Project title
+    {Integration Project | Python, Jackdaw, CEM, JSON-RPC | (In Progress)} % Subheader
+    {Balatro AI (Simulator-to-Live RL Environment)} % Project title
     {} % Location
     {Mar. 2026 - Present} % Date(s)
     {
       \begin{cvitems}
-        \item {Integrated inherited `balatrobot` code into a live RL pipeline connecting Balatro's JSON-RPC API to a Gymnasium environment.}
-        \item {Adapted observation and action wiring so pretrained PPO work can transfer more cleanly to the live game API.}
-        \item {Improved macOS runtime throughput to support more concurrent live instances; upcoming work will extend a higher-fidelity Python simulator for cloud training.}
+        \item {Built a versioned card-ID policy contract for seeded play across Jackdaw simulation and a live Balatro JSON-RPC bridge.}
+        \item {Implemented a simulator-to-live fidelity gate comparing each state and action, plus a fixed 5-route win/loss matrix.}
+        \item {Designed CEM training and an auditable Ante 1 evaluation protocol with 500/100/100 seed partitions, frozen checkpoints, and held-out safeguards.}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {Independent Project | C++, React | Localhost Prototype} % Subheader
+    {Educational Tool | C++, React | Localhost Prototype} % Subheader
     {Pathfinding Visualizer (Local Web App)} % Project title
     {} % Location
     {Sept. 2025 - Feb. 2026} % Date(s)
     {
       \begin{cvitems}
-        \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured logic so each algorithm could be visualized and compared.}
+        \item {Implemented BFS, Dijkstra, and A* pathfinding in C++ and structured logic so each algorithm could be compared.}
         \item {Built a React web UI to display grid-based exploration and shortest-path results, including controls for running scenarios.}
         \item {Optimized JSON serialization by encoding cell states as index lists, nearly doubling responsive grid size.}
         \item {Organized cell-state data into data structures for average-case O(1) cell lookup.}

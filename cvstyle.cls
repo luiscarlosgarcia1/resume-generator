@@ -48,7 +48,7 @@
 %-------------------------------------------------------------------------------
 %                Global scale variables
 %-------------------------------------------------------------------------------
-\pgfmathsetmacro{\fontscale}{1.05}
+\pgfmathsetmacro{\fontscale}{1.07}
 \pgfmathsetmacro{\spacingscale}{1.125}
 
 \newcommand{\scaledfont}[1]{%
